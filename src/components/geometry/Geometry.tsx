@@ -2,7 +2,7 @@
 import React from 'react';
 import { MockData } from '../../data/mockData';
 import './geometry.scss';
-import { createDots } from '../../untils/createDots';
+import { createDots } from '../../utils/createDots';
 
 type GeometryProps = {
   rotation: number;
