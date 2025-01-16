@@ -1,16 +1,24 @@
-import React from 'react';
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { useEffect, useRef } from 'react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { Swiper, SwiperSlide } from 'swiper/react';
-
 import { Navigation } from 'swiper/modules';
 import './history-block.scss';
+import gsap from 'gsap';
 import { IHistoryBlock } from '../../types/history-block';
 import { HistoryCard } from '../history-card/History-card';
 import { NextArrow } from '../../shared/svg/next-arrow';
 import { PrevArrow } from '../../shared/svg/prev-arrow';
 
-export const HistoryBlock = ({ data }: { data: IHistoryBlock[] }) => {
+interface HistoryBlockProps {
+  data: IHistoryBlock[];
+}
+
+export const HistoryBlock: React.FC<HistoryBlockProps> = ({ data }) => {
+  const swiperRef = useRef<any>(null);
+  const containerRef = useRef<HTMLDivElement | null>(null);
+
   const params = {
     spaceBetween: 10,
     navigation: {
@@ -26,9 +34,30 @@ export const HistoryBlock = ({ data }: { data: IHistoryBlock[] }) => {
     },
   };
 
+  useEffect(() => {
+    if (containerRef.current) {
+      gsap.fromTo(
+        containerRef.current,
+        { opacity: 0, y: 50 },
+        { opacity: 1, y: 0, duration: 0.5, ease: 'power3.inOut' },
+      );
+    }
+
+    return () => {
+      if (swiperRef.current) swiperRef.current.swiper.slideTo(0);
+      if (containerRef.current) {
+        gsap.to(containerRef.current, {
+          opacity: 0,
+          duration: 0.5,
+          ease: 'power2.in',
+        });
+      }
+    };
+  }, [data]);
+
   return (
-    <div className="history-block">
-      <Swiper {...params} slidesPerView="auto">
+    <div className="history-block" ref={containerRef}>
+      <Swiper {...params} slidesPerView="auto" ref={swiperRef}>
         <div>
           <div className="swiper-button-next">
             <NextArrow />
@@ -38,9 +67,8 @@ export const HistoryBlock = ({ data }: { data: IHistoryBlock[] }) => {
           </div>
         </div>
         {data.map((el) => (
-          <SwiperSlide>
+          <SwiperSlide key={el.id}>
             <HistoryCard
-              key={el.id}
               year={el.year}
               description={el.description}
               id={el.id}

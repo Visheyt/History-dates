@@ -45,6 +45,7 @@
 .swiper-button-next.swiper-button-disabled {
   opacity: 0;
 }
+
 @media (max-width: 768px) {
   .swiper::before {
     display: block;
@@ -63,7 +64,6 @@
 
 @media (max-width: 1200px) {
   .swiper-slide {
-    transition: opacity 0.3s ease;
     opacity: 0.5;
     width: 70%;
   }
