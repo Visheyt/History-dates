@@ -1,6 +1,6 @@
 To start project:
 
--Clone this repository to your computer
+-Clone this repo to your computer
 
 -Open terminal
 
