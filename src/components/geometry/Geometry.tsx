@@ -20,7 +20,7 @@ export const Geometry: React.FC<GeometryProps> = ({
   const dots = createDots({ numDots: 6, width: 536, height: 530 });
 
   return (
-    <div className="section__lines">
+    <div className="section__geometry">
       <div className="horizontal" />
       <div className="vertical" />
       <div
