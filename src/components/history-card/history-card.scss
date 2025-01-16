@@ -1,0 +1,25 @@
+.history-card {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: left;
+  font-size: 20px;
+  padding-inline: 80px;
+  min-height: 313px;
+  justify-content: center;
+}
+.history-card header {
+  color: rgba(56, 119, 238, 1);
+  font-family: Bebas Neue;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+@media (max-width: 768px) {
+  .history-card {
+    padding-inline: 20px;
+    min-height: 200px;
+    justify-content: flex-start;
+  }
+}

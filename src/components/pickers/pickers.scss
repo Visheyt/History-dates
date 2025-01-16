@@ -1,0 +1,45 @@
+.category-pickers {
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: left;
+  margin-left: 80px;
+  max-width: 350px;
+  z-index: 100;
+  order: 1;
+}
+.pickers__buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.button-container {
+  display: flex;
+  width: 200px;
+  justify-content: flex-end;
+}
+.button-container span {
+  width: 50px;
+  position: absolute;
+  right: 0;
+  top: -15px;
+  font-weight: 700;
+  transition: all 0.1s;
+}
+@media (max-width: 900px) {
+  .category-pickers {
+    margin-left: 20px;
+    gap: 10px;
+    max-width: 58px;
+    order: 3;
+    margin-bottom: 13px;
+  }
+  .category-pickers svg {
+    width: 25px;
+    height: 25px;
+  }
+  .pickers__buttons {
+    gap: 8px;
+  }
+}

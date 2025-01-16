@@ -1,0 +1,28 @@
+.dates {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 973px;
+  font-size: 150px;
+  font-weight: 700;
+  line-height: 160px;
+  letter-spacing: -0.02em;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.dates__begin-date {
+  color: rgb(38, 101, 219);
+}
+.dates__end-date {
+  color: rgb(253, 157, 210);
+}
+
+@media (max-width: 768px) {
+  .dates {
+    max-width: 280px;
+    justify-content: center;
+    gap: 50px;
+  }
+}

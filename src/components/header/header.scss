@@ -1,0 +1,28 @@
+.header {
+  margin-top: 104px;
+  display: flex;
+  gap: 78px;
+  align-items: center;
+  text-align: left;
+  z-index: 2;
+  margin-bottom: auto;
+  order: 0;
+}
+.header h1 {
+  max-width: 353px;
+}
+.header::before {
+  height: 134px;
+  width: 5px;
+  content: '';
+  background: linear-gradient(180deg, #3877ee -5%, #ef5da8 85%);
+}
+@media (max-width: 768px) {
+  .header {
+    margin-top: 59px;
+    margin-left: 20px;
+  }
+  .header::before {
+    display: none;
+  }
+}
