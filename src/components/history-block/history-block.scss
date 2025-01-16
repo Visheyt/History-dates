@@ -46,6 +46,15 @@
   opacity: 0;
 }
 @media (max-width: 768px) {
+  .swiper::before {
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+    margin-bottom: 20px;
+    height: 2px;
+    content: '';
+    background-color: rgba(199, 205, 217, 1);
+  }
   .swiper-button-prev,
   .swiper-button-next {
     display: none;
