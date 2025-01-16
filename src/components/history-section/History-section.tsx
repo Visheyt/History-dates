@@ -5,7 +5,7 @@ import { Dates } from '../dates/Dates';
 import { Header } from '../header/Header';
 import { HistoryBlock } from '../history-block/History-block';
 import './history-section.scss';
-import { Pagination } from '../pagintaion/pagination';
+import { Pagination } from '../pagintaion/Pagination';
 import { CategoryPickers } from '../pickers/Pickers';
 import { Geometry } from '../geometry/Geometry';
 
