@@ -7,6 +7,7 @@
   bottom: 32px;
   left: 50%;
   transform: translateX(-50%);
+  display: none;
 
   .pagination-dot {
     width: 6px;
@@ -24,5 +25,8 @@
     &:hover {
       background-color: var(--blue);
     }
+  }
+  @media (max-width: 768px) {
+    display: flex;
   }
 }

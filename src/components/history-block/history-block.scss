@@ -52,12 +52,14 @@
   }
 }
 
-.swiper-slide {
-  transition: opacity 0.3s ease;
-  opacity: 0.5;
-  width: 70%;
-}
+@media (max-width: 1200px) {
+  .swiper-slide {
+    transition: opacity 0.3s ease;
+    opacity: 0.5;
+    width: 70%;
+  }
 
-.swiper-slide.swiper-slide-active {
-  opacity: 1;
+  .swiper-slide.swiper-slide-active {
+    opacity: 1;
+  }
 }
