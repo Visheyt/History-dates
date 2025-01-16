@@ -9,4 +9,5 @@ To start project:
 -npm run start
 
 deploy: 
-[link]https://visheyt.github.io/History-dates/
+
+https://visheyt.github.io/History-dates/
